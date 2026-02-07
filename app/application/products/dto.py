@@ -5,7 +5,7 @@ from typing import Optional
 @dataclass(frozen=True)
 class ProductQuery:
     page: int = 1
-    limit: int = 10
+    limit: int = 100
     sort: str = "asc"
     category: Optional[str] = None
     q: Optional[str] = None

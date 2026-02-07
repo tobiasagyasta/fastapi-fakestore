@@ -41,7 +41,7 @@ router = APIRouter(prefix="/products", tags=["products"])
 @router.get("")
 def list_products(
     page: int = Query(1, ge=1),
-    limit: int = Query(10, ge=1, le=100),
+    limit: int = Query(100, ge=1, le=100),
     sort: Literal["asc", "desc"] = "asc",
     category: Optional[str] = None,
     q: Optional[str] = None,
